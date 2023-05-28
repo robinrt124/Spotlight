@@ -1,0 +1,95 @@
+.card {
+	grid-column: span 3/span 3;
+	align-items: flex-start;
+	flex-direction: column;
+	display: flex;
+	position: relative;
+
+	&__full {
+		top: -1.5rem;
+		bottom: -1.5rem;
+		border-radius: 1rem;
+		left: -1.5rem;
+		right: -1.5rem;
+		z-index: 20;
+		position: absolute;
+	}
+
+	&__hover {
+	    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+	    transition-timing-function: cubic-bezier(.4,0,.2,1);
+	    transition-duration: .15s;
+		background-color: var(--card-hover-bg);
+		position: absolute;
+		left: -1.5rem;
+		right: -1.5rem;
+		top: -1.5rem;
+		bottom: -1.5rem;
+		border-radius: 1rem;
+		opacity: 0;
+    	transform: translate(0,0) rotate(0) skewX(0) skewY(0) scaleX(.95) scaleY(.95);
+
+	}
+
+	&:hover &__hover {
+		opacity: 1;
+		transform: translate(0,0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+	}
+
+	&:hover .compare-link {
+		color: var(--main-color);
+	}
+}
+
+
+.card-visible {
+	border-radius: 1rem;
+	border: 1px solid rgba(63,63,70,.4);
+	padding: 1.5rem;
+
+	&:not(:first-child) {
+		margin-top: 2rem;
+	}
+}
+
+.input-box {
+	display: f;
+	margin-top: 1.5rem;
+}
+
+.input-field {
+	background-color: rgba(63,63,70,.15);
+	font-size: .875rem;
+	line-height: 1.5rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: calc(0.5rem - 1px);
+	padding-bottom: calc(0.5rem - 1px);
+	border-radius: 0.375rem;
+	box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+	border: 1px solid var(--border-color1);
+	outline: none;
+	color: white;
+	width: 80%;
+}
+
+.input-btn {
+	background-color: rgba(63,63,70,.15);
+	font-size: .875rem;
+	line-height: 1.5rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: calc(0.5rem - 1px);
+	padding-bottom: calc(0.5rem - 1px);
+	border-radius: 0.375rem;
+	box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+	border: 1px solid var(--border-color1);
+	outline: none;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+
+	&:hover {
+		opacity: .8;
+	}
+}
